@@ -7,7 +7,7 @@ def create_client():
     return client
 
 def writer(queue, write_complete_event):
-    for i in range(1, 15):
+    for i in range(1, 101):
         put_success = queue.offer(i)
         current_size = queue.size()
         if put_success:
